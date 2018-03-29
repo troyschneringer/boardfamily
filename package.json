@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "dev": "bundle exec jekyll serve"
+  },
+  "dependencies": {
+    "tachyons-sass": "^4.9.2"
+  }
+}

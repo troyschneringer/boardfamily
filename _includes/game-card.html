@@ -1,0 +1,19 @@
+<a class="items-stretch w-100 w-30-ns" href="{{ include.url }}">
+  <article class="relative shadow-2-ns h-100 hide-child pa2">
+    <div class="flex-row flex-column-ns justify-center-ns items-center ba b0-ns b--silver">
+      <img class="w-25 w-auto-ns" src="/assets/img/{{ include.image }}">
+      <div class="db dn-ns flex-auto self-stretch">
+        <div class="bg-black-50 ph2 h-100 white">
+          <h3 class="mv2">{{ include.title }}</h3>
+          {% include star-rating.html stars=include.stars %}
+          <p class="mv2 f7">{{ include.date | date: "%B %-d, %Y" }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="dn flex-ns absolute justify-center items-center child pa2 absolute--fill bg-black-50 white">
+      <h2>{{ include.title }}</h2>
+      {% include star-rating.html stars=include.stars %}
+      <p>{{ include.date | date: "%B %-d, %Y" }}</p>
+    </div>
+  </article>
+</a>
