@@ -2,25 +2,44 @@
 layout: default
 ---
 <header>
-  <h1 class="mb1 mt3 fw6">{{page.title}}</h1>
+  <h1 class="mv2 mv3-ns fw6">{{page.title}}</h1>
 </header>
-<!-- Quick Look -->
-<div class="flex-row-reverse-ns ba bw1 br2 b--purple i">
-  <div class="flex-row flex-column-ns justify-around w5-ns items-stretch bl-ns b--purple pa2 dark-gray">
-    <div class="flex-row mb1">
-      <span class="w2-ns mr1 mr0-ns"><i class="fas fa-users"></i></span>
-      <span>{{page.stats.players}}</span>
-    </div>
-    <div class="flex-row mb1">
-      <span class="w2-ns mr1 mr0-ns"><i class="fas fa-child"></i></span>
-      <span>{{page.stats.age}}</span>
-    </div>
-    <div class="flex-row mb1">
-      <span class="w2-ns mr1 mr0-ns"><i class="fas fa-clock"></i></span>
-      <span>{{page.stats.duration}}</span>
+<div class="flex-row-reverse-ns">
+  <!-- Quick Look -->
+  <div class="w5-ns">
+    <h3 class="dn db-ns mt0 mb2">Quick Look</h3>
+    <div class="ba bw1 br2 b--purple">
+      <div class="pa2 mid-gray">
+        <h4 class="dn db-ns mt0 mb2">Games Stats</h4>
+        <div class="pl2-ns flex-row flex-column-ns justify-around">
+          <div class="flex-row mb1-ns">
+            <span class="w2-ns mr1 mr0-ns"><i class="fas fa-users"></i></span>
+            <span>{{page.stats.players}}</span>
+          </div>
+          <div class="flex-row mb1-ns">
+            <span class="w2-ns mr1 mr0-ns"><i class="fas fa-child"></i></span>
+            <span>{{page.stats.age}}</span>
+          </div>
+          <div class="flex-row mb1-ns">
+            <span class="w2-ns mr1 mr0-ns"><i class="fas fa-clock"></i></span>
+            <span>{{page.stats.duration}}</span>
+          </div>
+        </div>
+        <hr class="w-100 b--solid silver"/>
+        <h4 class="dn db-ns mt0 mb2">Skills to Practice</h4>
+        <ul class="list pa0 pl2-ns ma0 flex flex-row flex-column-ns justify-center">
+          {% for skill in page.skills %}
+          <li class="mb1-ns {%if forloop.index0 > 2%}dn db-ns{%endif%}">
+            {%if forloop.index0 > 0%}<span class="di dn-ns mh2">-</span>{%endif%}{{skill}}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="flex-auto pa2">{{page.description}}</div>
+  <!-- /Quick Look -->
+  <div class="flex-auto pa2 ph0-ns">
+    <div class="i gray">{{page.description}}</div>
+  {{content}}
+  </div>
 </div>
-<!-- /Quick Look -->
-{{content}}

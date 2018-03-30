@@ -8,7 +8,7 @@ layout: base
 	<!-- Highlights -->
 	<div class="flex-row-ns items-center items-stretch-ns justify-between-ns ph2 ph0-ns">
 		{% for post in site.posts limit:3 %}
-			{% include game-card.html title=post.title url=post.url date=post.date image=post.image stars=post.stats.stars %}
+			{% include game-card.html title=post.title url=post.url date=post.date image=post.image stars=post.stars %}
 		{% endfor %}
 	</div>
 	<!-- /Highlights -->
