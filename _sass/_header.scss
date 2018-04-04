@@ -129,16 +129,16 @@
 				}
 			}
 		}
-		&:last-child{
-			>a{
-				>span{
-					width: auto;
-					@include tablet{
-						padding-left: 15px;
-					}
-				}
-			}
-		}
+		// &:last-child{
+		// 	>a{
+		// 		>span{
+		// 			width: auto;
+		// 			@include tablet{
+		// 				padding-left: 15px;
+		// 			}
+		// 		}
+		// 	}
+		// }
 		&.active{
 			>a, >a:hover, >a:focus{
 				background-color: transparent;
