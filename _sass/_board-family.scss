@@ -1,0 +1,97 @@
+.ph0 { padding-left: 0; padding-right: 0; }
+.pl0 { padding-left: 0; }
+.pr0 { padding-right: 0; }
+
+
+/* Theme Overrides */
+#backToTop {
+  z-index: 9999;
+}
+.media-body {
+  .list-inline.btnPart {
+    &.btn-color-1 {
+      @extend .btn-yellow;
+    }
+    &.btn-color-2 {
+      @extend .btn-green;
+    }
+    &.btn-color-3 {
+      @extend .btn-red;
+    }
+    &.btn-color-4 {
+      @extend .btn-sky;
+    }
+    &.btn-color-5 {
+      @extend .btn-purple
+    }
+    &.btn-color-6 {
+      @extend .btn-pink
+    }
+  }
+}
+
+.pageTitleSection {
+	.pageTitleInfo {
+    .breadcrumb {
+      > li + li::before {
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.sectionTitle {
+	h2 {
+    .color-1 { color: $color1; }
+    .color-2 { color: $color2; }
+
+    span.bg-color-1,
+    span.bg-color-1:after,
+    span.bg-color-1:before {
+      background-color: lighten( $color1, 7% ) !important;
+    }
+
+    span.bg-color-2,
+    span.bg-color-2:after,
+    span.bg-color-2:before {
+      background-color: lighten( $color2, 7% ) !important;
+    }
+  }
+}
+
+.teamInfo {
+	h3 {
+    color: #222;
+  }
+}
+
+.teamSection {
+	background-image: url("/assets/img/pattern-light.png");
+	width: 100%;
+	background-repeat: repeat;
+	height: auto;
+}
+
+.testimonialArea {
+  .container {
+    @include mobile-xs {
+      & {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    width: auto;
+  }
+  .testimonial-grid {
+    display: flex;
+    float: none;
+    @include mobile {
+      align-items: center;
+      flex-direction: column;
+    }
+    @include desktops {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+}

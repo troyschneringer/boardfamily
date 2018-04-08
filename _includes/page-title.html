@@ -1,0 +1,13 @@
+<section class="pageTitleSection">
+  <div class="container">
+    <div class="pageTitleInfo">
+      <h2>{{ include.title | default: "The Board Family" }}</h2>
+      {% if include.page %}
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active">{{ include.page }}</li>
+      </ol>
+      {% endif %}
+    </div>
+  </div>
+</section>
