@@ -19,7 +19,7 @@ permalink: /
       {% assign colorIndex = forloop.index0 | modulo: 6 | plus: 1 %}
       <div class="col-sm-3 col-xs-12 block">
         <div class="thumbnail thumbnailContent">
-          <a href="{{post.url}}"><img src="http://via.placeholder.com/270x230" alt="image" class="img-responsive"></a>
+          <a href="{{post.url}}"><img src="//via.placeholder.com/270x230" alt="image" class="img-responsive"></a>
           <div class="caption border-color-{{colorIndex}}">
             <h3><a href="{{post.url}}" class="color-{{colorIndex}}">{{ post.title }}</a></h3>
             {% include star-rating.html stars=3 %}

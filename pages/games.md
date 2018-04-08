@@ -64,7 +64,7 @@ permalink: /games/
         {% assign colorIndex = forloop.index0 | modulo: 6 | plus: 1 %}
         <div class="media courseList couresListPage">
           <a class="media-left border-color-{{colorIndex}}" href="{{post.url}}">
-            <img class="media-object" src="http://via.placeholder.com/270x200" alt="Image">
+            <img class="media-object" src="//via.placeholder.com/270x200" alt="Image">
           </a>
           <div class="media-body">
             <h3 class="media-heading"><a href="{{post.url}}" class="color-{{colorIndex}}">{{ post.title }}</a></h3>
