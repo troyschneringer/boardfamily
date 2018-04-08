@@ -9,44 +9,44 @@ layout: default
       <div class="col-md-3 col-sm-4 col-xs-12">
         <aside>
           <div class="panel panel-default eventSidebar">
-              <div class="panel-heading bg-color-1 border-color-1">
+              <div class="panel-heading bg-color-yellow border-color-yellow">
                 <h3 class="panel-title">Game Details</h3>
               </div>
               <div class="panel-body">
                 <ul class="media-list">
                   <li class="media">
-                    <div class="media-left iconContent bg-color-4">
+                    <div class="media-left iconContent bg-color-blue">
                       <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="media-body iconContent">
-                      <h4 class="media-heading color-4">Rating</h4>
+                      <h4 class="media-heading color-blue">Rating</h4>
                       <p>{% include star-rating.html stars=page.stars %}</p>
                     </div>
                   </li>
                   <li class="media">
-                    <div class="media-left iconContent bg-color-2">
+                    <div class="media-left iconContent bg-color-green">
                       <i class="fa fa-users" aria-hidden="true"></i>
                     </div>
                     <div class="media-body iconContent">
-                      <h4 class="media-heading color-2">Players</h4>
+                      <h4 class="media-heading color-green">Players</h4>
                       <p>{{page.stats.players}}</p>
                     </div>
                   </li>
                   <li class="media">
-                    <div class="media-left iconContent bg-color-3">
+                    <div class="media-left iconContent bg-color-red">
                       <i class="fa fa-child" aria-hidden="true"></i>
                     </div>
                     <div class="media-body iconContent">
-                      <h4 class="media-heading color-3">Ages</h4>
+                      <h4 class="media-heading color-red">Ages</h4>
                       <p>{{page.stats.age}}</p>
                     </div>
                   </li>
                   <li class="media iconContet">
-                    <div class="media-left iconContent bg-color-5">
+                    <div class="media-left iconContent bg-color-purple">
                       <i class="fa fa-clock" aria-hidden="true"></i>
                     </div>
                     <div class="media-body iconContent">
-                      <h4 class="media-heading color-5">Play Time</h4>
+                      <h4 class="media-heading color-purple">Play Time</h4>
                       <p>{{page.stats.duration}}</p>
                     </div>
                   </li>
@@ -57,9 +57,22 @@ layout: default
       </div>
       <div class="col-md-9 col-sm-8 col-xs-12 block">
         <div class="thumbnail thumbnailContent alt">
-          <img src="//via.placeholder.com/870x470" alt="image" class="img-responsive">
+          <img src="/img/{{page.id}}/banner.jpg" alt="image" class="img-responsive">
           <div class="caption border-color-1 singleBlog">
-            {{content}}
+            <h1>{{page.title}}</h1>
+            <ul class="list-inline blogInfo">
+              <li><i class="fa fa-user" aria-hidden="true"></i>{{page.author}}</li>
+            </ul>
+            <section class="content">{{content}}</section>
+            <section class="full-width clearfix testimonialArea">
+              <div class="container">
+                <div class="row testimonial-grid">
+                  {% for item in page.quotes %}
+                    {% include quote.html name=item.name title=item.title color=item.color quote=item.quote %}
+                  {% endfor %}
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
