@@ -2,6 +2,25 @@
 .pl0 { padding-left: 0; }
 .pr0 { padding-right: 0; }
 
+// Colors
+.color-yellow { @extend .color-1; }
+.bg-color-yellow { @extend .bg-color-1; }
+.border-color-yellow { @extend .border-color-1; }
+.color-green { @extend .color-2; }
+.bg-color-green { @extend .bg-color-2; }
+.border-color-green { @extend .border-color-2; }
+.color-red { @extend .color-3; }
+.bg-color-red { @extend .bg-color-3; }
+.border-color-red { @extend .border-color-3; }
+.color-blue { @extend .color-4; }
+.bg-color-blue { @extend .bg-color-4; }
+.border-color-blue { @extend .border-color-4; }
+.color-purple { @extend .color-5; }
+.bg-color-purple { @extend .bg-color-5; }
+.border-color-purple { @extend .border-color-5; }
+.color-pink { @extend .color-6; }
+.bg-color-pink { @extend .bg-color-6; }
+.border-color-pink { @extend .border-color-6; }
 
 /* Theme Overrides */
 #backToTop {
@@ -60,6 +79,48 @@
   }
 }
 
+.singleBlog {
+  h1 {
+    color: $color1;
+    line-height: 34px;
+    font-family: 'Dosis', sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: block;
+  }
+  h2 {
+    color: $color3;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  h5 {
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 15px !important;
+  }
+  ul.blogInfo {
+    margin-bottom: 15px !important;
+    
+  }
+  section.content {
+    ul{
+      list-style-position: inside;
+      padding-left:15px;
+      margin-bottom: 15px;
+      li{
+        color: $text-color;
+        list-style-type: disc;
+      }
+    }
+  }
+}
+
 .teamInfo {
 	h3 {
     color: #222;
@@ -67,7 +128,7 @@
 }
 
 .teamSection {
-	background-image: url("/assets/img/pattern-light.png");
+	background-image: url("/img/site/pattern-light.png");
 	width: 100%;
 	background-repeat: repeat;
 	height: auto;
@@ -93,6 +154,10 @@
     @include desktops {
       justify-content: center;
       flex-direction: row;
+    }
+
+    .testimonialContent {
+      h3 { color: $white-color; }
     }
   }
 }
