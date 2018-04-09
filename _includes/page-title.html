@@ -1,7 +1,34 @@
 <section class="pageTitleSection">
   <div class="container">
     <div class="pageTitleInfo">
-      <h2>{{ include.title | default: "The Board Family" }}</h2>
+      <h2>{{ include.title }}</h2>
+      {% if include.subtitle %}
+      <div class="slider-caption container">
+        <div class="tp-caption rs-caption-1 sft start text-center"
+          data-hoffset="0"
+          data-x="center"
+          data-y="200"
+          data-speed="800"
+          data-start="1000"
+          data-easing="Back.easeInOut"
+          data-endspeed="300">
+          Sell Kids Products
+        </div>
+        <div class="tp-caption rs-caption-2 sft text-center"
+          data-hoffset="0"
+          data-x="center"
+          data-y="265"
+          data-speed="1000"
+          data-start="1500"
+          data-easing="Power4.easeOut"
+          data-endspeed="300"
+          data-endeasing="Power1.easeIn"
+          data-captionhidden="off">
+          All ecommerce features are included with KIDZ <br>
+          Build your ecommerce site.
+        </div>
+      </div>
+      {% endif %}
       {% if include.page %}
       <ol class="breadcrumb">
         <li><a href="/">Home</a></li>
