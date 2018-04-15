@@ -47,7 +47,7 @@ layout: default
                     </div>
                     <div class="media-body iconContent">
                       <h4 class="media-heading color-purple">Play Time</h4>
-                      <p>{{page.stats.duration}}</p>
+                      <p>{{page.stats.playTime}}</p>
                     </div>
                   </li>
                 </ul>
@@ -63,16 +63,42 @@ layout: default
             <ul class="list-inline blogInfo">
               <li><i class="fa fa-user" aria-hidden="true"></i>{{page.author}}</li>
             </ul>
-            <section class="content">{{content}}</section>
-            <section class="full-width clearfix testimonialArea">
-              <div class="container">
-                <div class="row testimonial-grid">
-                  {% for item in page.quotes %}
-                    {% include quote.html name=item.name title=item.title color=item.color quote=item.quote %}
-                  {% endfor %}
+            <!-- Summary -->
+            {% if page.summary %}
+              <section class="content">{{ page.summary | markdownify }}</section>
+            {% endif %}
+            <!-- Quote 1 -->
+            {% if page.quotes.size > 0 %}
+            {% assign q1 = page.quotes[0] %}
+              {% include quote.html color="blue" position="right" name=q1.name title=q1.title quote=q1.quote %}
+            {% endif %}
+            <!-- Teachability -->
+            {% if page.teachability %}
+              <section class="content">
+                <h2 color="color-blue">Teachability</h2>
+                {{ page.teachability | markdownify }}
+              </section>
+            {% endif %}
+            <!-- Modifications -->
+            {% if page.modifications %}
+              <section class="product-review clearfix">
+                <div class="tabCommon">
+                  <div class="tab-content">
+                    <div class="tab-pane fade in active">
+                      <div class="media">
+                        <h3>Modifications</h3>
+                        <p>{{ page.modifications.summary | markdownify }}</p>
+                        <ul class="list-unstyled para-list">
+                        {% for item in page.modifications.mods %}
+                          <li><i class="fa fa-check" aria-hidden="true"></i>{{item}}</li>
+                        {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            {% endif %}
           </div>
         </div>
       </div>

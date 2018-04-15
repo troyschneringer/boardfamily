@@ -79,48 +79,6 @@
   }
 }
 
-.singleBlog {
-  h1 {
-    color: $color1;
-    line-height: 34px;
-    font-family: 'Dosis', sans-serif;
-    text-transform: capitalize;
-    font-weight: 700;
-    margin: 0 0 15px 0;
-    width: 100%;
-    text-overflow: ellipsis;
-    white-space: normal;
-    display: block;
-  }
-  h2 {
-    color: $color3;
-    font-weight: 400;
-    font-size: 16px;
-    text-transform: capitalize;
-  }
-  h5 {
-    text-transform: uppercase;
-  }
-  p {
-    margin-bottom: 15px !important;
-  }
-  ul.blogInfo {
-    margin-bottom: 15px !important;
-    
-  }
-  section.content {
-    ul{
-      list-style-position: inside;
-      padding-left:15px;
-      margin-bottom: 15px;
-      li{
-        color: $text-color;
-        list-style-type: disc;
-      }
-    }
-  }
-}
-
 .teamInfo {
 	h3 {
     color: #222;

@@ -1,0 +1,73 @@
+.singleBlog {
+  h1 {
+    color: $color1;
+    line-height: 34px;
+    font-family: 'Dosis', sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: block;
+  }
+  h2 {
+    color: $color3;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  h5 {
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 15px !important;
+  }
+  ul.blogInfo {
+    margin-bottom: 15px !important;
+    
+  }
+  .product-review {
+    clear: both;
+  }
+  section.content {
+    ul{
+      list-style-position: inside;
+      padding-left:15px;
+      margin-bottom: 15px;
+      li{
+        color: $text-color;
+        list-style-type: disc;
+      }
+    }
+    ul.list-unstyled {
+      li {
+        list-style-type: none; 
+      }
+    }
+  }
+  .testimonialContainer {
+    position: relative;
+    margin-top: 55px;
+    @include mobile {
+    }
+    
+    @include desktops {
+      display: flex;
+      max-width: 230px;
+  
+      &.left { float: left; }
+      &.right { float: right; }
+    }
+  
+    .testimonialContent {
+      height: auto;
+      margin-bottom: 16px;
+      padding: 35px 20px 20px 20px;
+      h3 {
+        color: $white-color;
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
