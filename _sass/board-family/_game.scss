@@ -12,7 +12,7 @@
     display: block;
   }
   h2 {
-    color: $color3;
+    //color: $color3;
     font-weight: 400;
     font-size: 16px;
     text-transform: capitalize;
@@ -29,6 +29,13 @@
   }
   .product-review {
     clear: both;
+    .tabCommon {
+      .tab-content {
+        .tab-pane {
+          background-color: #e8e8e8;
+        }
+      }
+    }
   }
   section.content {
     ul{
@@ -46,28 +53,28 @@
       }
     }
   }
-  .testimonialContainer {
-    position: relative;
-    margin-top: 55px;
-    @include mobile {
-    }
+  // .testimonialContainer {
+  //   position: relative;
+  //   margin-top: 55px;
+  //   @include mobile {
+  //   }
     
-    @include desktops {
-      display: flex;
-      max-width: 230px;
+  //   @include desktops {
+  //     display: flex;
+  //     max-width: 230px;
   
-      &.left { float: left; }
-      &.right { float: right; }
-    }
+  //     &.left { float: left; margin-right: 16px; }
+  //     &.right { float: right; margin-left: 16px; }
+  //   }
   
-    .testimonialContent {
-      height: auto;
-      margin-bottom: 16px;
-      padding: 35px 20px 20px 20px;
-      h3 {
-        color: $white-color;
-        margin-bottom: 0 !important;
-      }
-    }
-  }
+  //   .testimonialContent {
+  //     height: auto;
+  //     margin-bottom: 16px;
+  //     padding: 35px 20px 20px 20px;
+  //     h3 {
+  //       color: $white-color;
+  //       margin-bottom: 0 !important;
+  //     }
+  //   }
+  // }
 }

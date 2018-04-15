@@ -29,7 +29,7 @@ layout: default
                     </div>
                     <div class="media-body iconContent">
                       <h4 class="media-heading color-green">Players</h4>
-                      <p>{{page.stats.players}}</p>
+                      <p><strong>{{page.stats.players}}</strong></p>
                     </div>
                   </li>
                   <li class="media">
@@ -38,7 +38,7 @@ layout: default
                     </div>
                     <div class="media-body iconContent">
                       <h4 class="media-heading color-red">Ages</h4>
-                      <p>{{page.stats.age}}</p>
+                      <p><strong>{{page.stats.age}}</strong></p>
                     </div>
                   </li>
                   <li class="media iconContet">
@@ -46,8 +46,10 @@ layout: default
                       <i class="fa fa-clock" aria-hidden="true"></i>
                     </div>
                     <div class="media-body iconContent">
-                      <h4 class="media-heading color-purple">Play Time</h4>
-                      <p>{{page.stats.playTime}}</p>
+                      <h4 class="media-heading color-purple">Real Play Time</h4>
+                      <p><strong>{{page.stats.playtime.gametime}}</strong></p>
+                      <p><em>setup: {{page.stats.playtime.setup}}</em></p>
+                      <p><em>cleanup: {{page.stats.playtime.cleanup}}</em></p>
                     </div>
                   </li>
                 </ul>
@@ -56,26 +58,40 @@ layout: default
         </aside>
       </div>
       <div class="col-md-9 col-sm-8 col-xs-12 block">
-        <div class="thumbnail thumbnailContent alt">
+        <div class="thumbnail thumbnailContent">
           <img src="//via.placeholder.com/870x470" alt="image" class="img-responsive">
+          <!-- Summary -->
           <div class="caption border-color-1 singleBlog">
             <h1>{{page.title}}</h1>
             <ul class="list-inline blogInfo">
               <li><i class="fa fa-user" aria-hidden="true"></i>{{page.author}}</li>
             </ul>
-            <!-- Summary -->
             {% if page.summary %}
               <section class="content">{{ page.summary | markdownify }}</section>
             {% endif %}
-            <!-- Quote 1 -->
-            {% if page.quotes.size > 0 %}
-            {% assign q1 = page.quotes[0] %}
-              {% include quote.html color="blue" position="right" name=q1.name title=q1.title quote=q1.quote %}
+            <!-- Review -->
+            {% if page.summary %}
+              <section class="content clearfix">
+                <h2 class="color-red">Review</h2>
+                {{ page.review | markdownify }}
+              </section>
             {% endif %}
+            <!-- Quotes -->
+            <section class="full-width clearfix testimonialArea">
+              <div class="container">
+                <div class="row testimonial-grid">
+                  {% assign quotes = page.quotes | sample:3 %}
+                  {% for item in quotes %}
+                    {% assign color = forloop.index | plus: 3 %}
+                    {% include quote.html name=item.name color=color title=item.title quote=item.quote %}
+                  {% endfor %}
+                </div>
+              </div>
+            </section>
             <!-- Teachability -->
             {% if page.teachability %}
-              <section class="content">
-                <h2 color="color-blue">Teachability</h2>
+              <section class="content clearfix">
+                <h2 class="color-red">Teachability</h2>
                 {{ page.teachability | markdownify }}
               </section>
             {% endif %}
@@ -99,7 +115,7 @@ layout: default
                 </div>
               </section>
             {% endif %}
-          </div>
+            </section>
         </div>
       </div>
     </div>
