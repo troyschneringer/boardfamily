@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "bundle exec jekyll serve"
+    "dev": "bundle exec jekyll serve --draft"
   },
   "dependencies": {
     "tachyons-sass": "^4.9.2"
