@@ -4,6 +4,8 @@ title: Camel Up Cards
 categories: games
 author: Troy
 
+stars: 5
+
 stats:
   players: 2-6
   age: 8+

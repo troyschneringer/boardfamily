@@ -4,6 +4,8 @@ title: Mag Blast
 categories: games
 author: Troy
 
+stars: 3
+
 stats:
   players: 2-5
   age: 10+

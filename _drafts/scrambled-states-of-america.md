@@ -4,6 +4,8 @@ title: The Scrambled States of America
 categories: games
 author: Troy
 
+stars: 4
+
 stats:
   players: 2-4
   age: 8+

@@ -57,7 +57,7 @@ permalink: /
           <a href="{{post.url}}"><img src="//via.placeholder.com/270x230" alt="image" class="img-responsive"></a>
           <div class="caption border-color-{{colorIndex}}">
             <h3><a href="{{post.url}}" class="color-{{colorIndex}}">{{ post.title }}</a></h3>
-            {% include star-rating.html stars=3 %}
+            {% include star-rating.html stars=post.stars %}
             <ul class="list-inline btn-color-{{colorIndex}}">
               <li><a href="{{post.url}}" class="btn btn-link pl0"><i class="fa fa-angle-double-right" aria-hidden="true"></i> More</a></li>
             </ul>
