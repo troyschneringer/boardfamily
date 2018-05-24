@@ -13,12 +13,12 @@ stats:
     gametime: 30-60 mins
 
 quotes:
-  - name: Kid 1
-    title: age 3
-    quote: It's the awesomest to ever awesome
-  - name: Kid 1
-    title: age 3
-    quote: This one makes my face melt
+  - name: Caleb
+    title: age 10
+    quote: I like that it's all about chance which makes it very funny and unpredictable.
+  - name: Ali
+    title: age 8
+    quote: I like that the camel pieces can stack up and it can have strategy or not.
 
 summary: |
   *Camel Up Cards* is the card based variant of the Camel Up board game.
@@ -42,7 +42,7 @@ review: |
   I love to teach this game to new people and have often found the family coming back to it as well.
 
 teachability: |
-  While the recommended age is 8+ we have been playing with kids aged 5+ with no issue.
+  While the recommended age is 8+ we have been playing with kids aged 5+ with no issues.
 
   The game is very easy to teach gamers of all ages as you have two basic actions on your turn:
 
